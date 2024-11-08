@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Producto</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Agregar Producto</h1>
+        <form id="add-product-form" method="POST" onsubmit="return handleAddProduct(event)">
+            <label for="product-name">Nombre del Producto:</label>
+            <input type="text" id="name" required>
+
+            <label for="product-price">Precio del Producto:</label>
+            <input type="number" id="price" required min="0 step="0.01">
+
+            <input type="hidden" id="base-url">
+            <input type="hidden" id="get-all-endpoint">
+
+            <button type="submit">Agregar Producto</button>
+        </form>
+        <a href="list.html">Volver a la lista de productos</a>
+    </div>
+
+    <script src="./js/insert.js"></script>
+</body>
+</html>
