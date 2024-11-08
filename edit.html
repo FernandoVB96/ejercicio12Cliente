@@ -1,11 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit</title>
+    <title>Editar Producto</title>
 </head>
 <body>
-    
+    <div class="container">
+        <h1>Editar Producto</h1>
+        <form id="edit-form" onsubmit="return handleEditFormSubmit(event)">
+            <input type="hidden" id="id">
+
+            <label for="name">Nombre del Producto:</label>
+            <input type="text" id="name" required>
+
+            <label for="price">Precio del Producto:</label>
+            <input type="number" id="price" required step="0.01">
+
+            <button type="submit">Actualizar Producto</button>
+        </form>
+    </div>
+
+    <script src="./js/edit.js"></script>
 </body>
 </html>
